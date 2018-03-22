@@ -88,3 +88,13 @@ Scan Result for site.com
 +----+--------------+----------------+
 
 ```
+
+###Word List
+
+* word list:         some commonly used payload
+
+* word list small:   a little amount of payload
+
+* word list medium:  medium amount of payload
+
+* word list huge:    a large amount of payload
