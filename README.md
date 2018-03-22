@@ -41,64 +41,44 @@ Disclaimer: I am not responsible for any damage done using this tool. This tool 
 
 * Custom wordlist can be included
 
-* User-friendly UI
+* One command can do all the things
 
-###Usage(GET Method):
+###Usage:
 
 ```
-COMMAND:  python brutexss.py
-METHOD:   g
+COMMAND:  python brutexss.py -m <METHOD> -u <URL> -t <WORDLIST> -d <DATA>
+METHOD:   (G)ET & (P)OST
 URL:      http://www.site.com/?parameter=value
 WORDLIST: wordlist.txt
-```
-
-###Usage(POST method):
-
-```
-COMMAND:   python brutexss.py
-METHOD:    p
-URL:       http://www.site.com/file.php
 POST DATA: parameter=value&parameter1=value1
-WORDLIST:  wordlist.txt
 ```
 
 ###Output:
 
 ```
-  ____             _        __  ______ ____  
- | __ ) _ __ _   _| |_ ___  \ \/ / ___/ ___| 
- |  _ \| '__| | | | __/ _ \  \  /\___ \___ \ 
+ ____             _        __  ______ ____
+ | __ ) _ __ _   _| |_ ___  \ \/ / ___/ ___|
+ |  _ \| '__| | | | __/ _ \  \  /\___ \___ \
  | |_) | |  | |_| | ||  __/  /  \ ___) |__) |
- |____/|_|   \__,_|\__\___| /_/\_\____/____/ 
-                                            
+ |____/|_|   \__,_|\__\___| /_/\_\____/____/
+
  BruteXSS - Cross-Site Scripting BruteForcer
- 
- Author: Shawar Khan - https://shawarkhan.com                      
 
+ Sponsored & Supported by Netsparker Web Application Security Scanner
 
-Select method: [G]ET or [P]OST (G/P): p
-[?] Enter URL:
-[?] > http://site.com/file.php
-[+] Checking if site.com is available...
-[+] site.com is available! Good!
-[?] Enter post data: > parameter=value&parameter1=value1
-[?] Enter location of Wordlist (Press Enter to use default wordlist.txt)
-[?] > wordlist.txt
-[+] Using Default wordlist...
-[+] Loading Payloads from specified wordlist...
-[+] 25 Payloads loaded...
-[+] Injecting Payloads...
-
-[+] Testing 'parameter' parameter...
-[+] 2 / 25 payloads injected...
-[!] XSS Vulnerability Found! 
-[!] Parameter:	parameter
-[!] Payload:	"><script>prompt(1)</script>
-
-[+] Testing 'parameter1' parameter...
-[+] 25 / 25 payloads injected...
-[+] 'parameter1' parameter not vulnerable.
-[+] 1 Parameter is vulnerable to XSS.
+ Note: Using incorrect payloads in the custom
+ wordlist may give you false positives so its
+ better to use the wordlist which is already
+ provided for positive results.
+Checking if site.com is available...
+site.com is available! Good!
+Bruteforce start:
+Testing 'parameter' parameter...
+2 / 25 payloads injected...
+Bruteforce Completed.
+'parameter1' parameter not vulnerable.
+1 Parameter is vulnerable to XSS.
+Scan Result for site.com
 +----+--------------+----------------+
 | Id | Parameters   |     Status     |
 +----+--------------+----------------+
