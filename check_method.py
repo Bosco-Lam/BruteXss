@@ -65,7 +65,8 @@ def get(site, pl_file):
                         c = 1
                         total = total + 1
                         progress = progress + 1
-                        break
+                        #break
+                        #I think here do not need break, because sometimes user want to find all of the possible payloads.
                     else:
                         c = 0
             if c == 0:
@@ -157,7 +158,8 @@ def post(site, pl_file, data):
                             c = 1
                             total = total + 1
                             progress = progress + 1
-                            break
+                            #break
+                            #I think here do not need break, because sometimes user want to find all of the possible payloads.
                         else:
                             c = 0
                 if c == 0:
